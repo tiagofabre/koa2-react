@@ -1,17 +1,17 @@
 import Router from 'koa-router'
 import Data from '../data/data'
-
+import mock from '../data/mock'
 const router = new Router()
 const dbHandler = new Data()
 
-dbHandler.insertDefaultUsers()
+dbHandler.insertUserList(mock)
 
 router.get('/', (ctx) => {
-  ctx.body = {'endpoints': ['/getUserById/:id', '/getAllUsers']}
+  ctx.body = {'endpoints GET': ['/getUserById/:id', '/getAllUsers']}
 })
 
 router.get('/getUserById/:id', ctx => {
-  ctx.body = [{ id: 0, 'username': 'Elayne', 'name': 'Elayne', 'credits': 200, 'logged': false }]
+  ctx.body = dbHandler.getUserById(ctx.params.id)
 })
 
 router.get('/getAllUsers', ctx => {
