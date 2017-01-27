@@ -1,17 +1,17 @@
 import Loki from 'lokijs'
 
 let db = new Loki('loki.json')
-let user = db.addCollection('user')
+let users = db.addCollection('user')
 
 class DatabaseHandler {
   insertUserList (list) {
     list.forEach((element) => {
-      user.insert(element)
+      users.insert(element)
     })
   }
 
   getUserById (id) {
-    return user.find()
+    return users.find()
     .filter(e => {
       return e.id === parseInt(id)
     })
@@ -23,13 +23,17 @@ class DatabaseHandler {
         credits: e.credits,
         logged: e.logged
       }
-    })[0]
+    })[0] || null
   }
 
   getAllUsers () {
-    return user.find().map(e => {
+    return users.find().map(e => {
       return { id: e.id, name: e.name }
     })
+  }
+
+  deleteData () {
+    users.find().forEach(e => users.remove(e))
   }
 }
 
