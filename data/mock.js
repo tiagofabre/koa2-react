@@ -9,4 +9,4 @@ module.exports = [{ id: 0, 'username': 'Elayne', 'name': 'Elayne', 'credits': 20
     { id: 8, 'username': 'Emogene', 'name': 'Emogene', 'credits': 1000, 'logged': false },
     { id: 9, 'username': 'Sarette', 'name': 'Sarette', 'credits': 1100, 'logged': false },
     { id: 10, 'username': 'Caprice', 'name': 'Caprice', 'credits': 1200, 'logged': false },
-    { id: 11, 'username': 'Tester', 'name': 'Caprice', 'credits': 1200, 'logged': false }]
+    { id: 11, 'username': 'Tester', 'name': 'Tester', 'credits': 1200, 'logged': false }]

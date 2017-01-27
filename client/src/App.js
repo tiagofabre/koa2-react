@@ -30,7 +30,6 @@ class App extends Component {
   }
 
   assignState (value) {
-    console.log(value)
     this.setState(value)
   }
 
@@ -39,14 +38,17 @@ class App extends Component {
 
       <div className="container">
         <div className="row">
-          <h1>Simple react app consuming an REST API</h1>
-          <ul>
-            {
-              this.state.requestState.map((element) => {
-                return <li>{ element.id } - { element.name}</li>
-              })
-            }
-          </ul>
+          <div className="col-centered">
+            <h1>React app 💪</h1>
+            <p>Simple react app consuming an REST API</p>
+            <ul>
+              {
+                this.state.requestState.map((element) => {
+                  return <li>{ element.id } - { element.name}</li>
+                })
+              }
+            </ul>
+          </div>
         </div>
       </div>
     );

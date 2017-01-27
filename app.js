@@ -1,6 +1,4 @@
 import Koa from 'koa'
-import views from 'koa-views'
-import serve from 'koa-static'
 import rootRoutes from './routes/index'
 
 const app = new Koa()

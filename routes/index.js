@@ -5,6 +5,7 @@ import mock from '../data/mock'
 const router = new Router()
 const dbHandler = new Data()
 
+dbHandler.deleteData()
 dbHandler.insertUserList(mock)
 
 router.get('/', (ctx) => {

@@ -4,7 +4,7 @@ import mock from '../data/mock'
 
 const dbHandler = new Data()
 
-test('Should have no users', async (t) => {
+test('Should have no users', async t => {
   await dbHandler.deleteData()
   t.is(await dbHandler.getAllUsers().length, 0)
 })
