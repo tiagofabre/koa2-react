@@ -16,19 +16,19 @@ class DatabaseHandler {
       return e.id === parseInt(id)
     })
     .map(e => {
-      return { 
-        id: e.id, 
-        username: e.username, 
-        name: e.name, 
-        credits: e.credits, 
-        logged: e.logged 
+      return {
+        id: e.id,
+        username: e.username,
+        name: e.name,
+        credits: e.credits,
+        logged: e.logged
       }
     })[0]
   }
 
   getAllUsers () {
     return user.find().map(e => {
-      return { id: e.id, name: e.name}
+      return { id: e.id, name: e.name }
     })
   }
 }
