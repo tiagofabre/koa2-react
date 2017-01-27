@@ -9,8 +9,6 @@ A simple react app consuming a REST API made with Koa2
 $ npm i && cd client && npm i && cd ..
 ```
 
-Start the servers.
-
 ## Test
 
 Test koa project - Inside the backend project the test is made with [ava](https://github.com/avajs/ava) test runner
